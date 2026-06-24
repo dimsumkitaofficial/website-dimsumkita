@@ -306,6 +306,30 @@
   }
 
   .brand h2 {
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 15px;
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand h2 {
+    font-size: 14px;
+  }
+
+  .mobile-menu {
+    width: 240px;
   }
 }

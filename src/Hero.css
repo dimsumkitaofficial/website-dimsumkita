@@ -60,19 +60,32 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .overlay {
+    min-height: 100vh;
+    padding: 120px 20px 60px;
+  }
+
   .hero-content h1 {
-    font-size: 52px !important;
+    font-size: 42px !important;
+    line-height: 1.15;
   }
 
   .hero-content p {
-    font-size: 18px !important;
+    font-size: 17px !important;
+    line-height: 1.8;
   }
 
   .hero-buttons {
     flex-direction: column;
+    gap: 15px;
   }
 
   .hero-buttons a {
     width: 100%;
+    text-align: center;
   }
 }

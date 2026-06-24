@@ -1,0 +1,78 @@
+.hero {
+  min-height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+.overlay {
+  min-height: 100vh;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 0 30px;
+}
+
+.hero-content {
+  max-width: 1000px;
+}
+
+.hero-content h1 {
+  font-size: 72px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: white;
+
+  margin-bottom: 25px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  line-height: 1.8;
+  color: white;
+
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hero-buttons a {
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  background: #ff6b00;
+  color: white;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 52px !important;
+  }
+
+  .hero-content p {
+    font-size: 18px !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+}

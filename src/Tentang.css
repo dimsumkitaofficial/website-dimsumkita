@@ -1,0 +1,124 @@
+.tentang-section {
+  padding: 100px 8%;
+  background: #fff;
+}
+
+.tentang-container {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.tentang-image {
+  flex: 1;
+}
+
+.tentang-image img {
+  width: 100%;
+  height: 550px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.tentang-content {
+  flex: 1;
+}
+
+.tentang-label {
+  color: #ff6b00;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.tentang-content h2 {
+  font-size: 48px;
+
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.tentang-line {
+  width: 80px;
+  height: 4px;
+
+  background: #ff6b00;
+
+  border-radius: 20px;
+
+  margin-bottom: 25px;
+}
+
+.tentang-content p {
+  color: #555;
+
+  line-height: 2;
+
+  margin-bottom: 18px;
+
+  text-align: justify;
+}
+
+.tentang-stats {
+  margin-top: 35px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.stat-box {
+  background: #fffaf5;
+
+  border: 1px solid #ffe0c2;
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+}
+
+.stat-box h3 {
+  color: #ff6b00;
+
+  font-size: 24px;
+
+  margin-bottom: 8px;
+}
+
+.stat-box span {
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  .tentang-container {
+    flex-direction: column;
+  }
+
+  .tentang-image img {
+    height: 400px;
+  }
+
+  .tentang-content h2 {
+    font-size: 38px;
+  }
+
+  .tentang-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

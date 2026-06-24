@@ -1,0 +1,101 @@
+.lokasi-section {
+  padding: 100px 8%;
+  background: #fff;
+}
+
+.lokasi-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.lokasi-header h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.lokasi-header p {
+  color: #666;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.lokasi-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.lokasi-map {
+  height: 550px;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.lokasi-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  background: #fffaf5;
+  padding: 20px;
+  border-radius: 18px;
+  border-left: 5px solid #ff6b00;
+}
+
+.info-card h3 {
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  color: #555;
+  line-height: 1.8;
+}
+
+.lokasi-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.lokasi-buttons a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.maps-btn {
+  background: #ff6b00;
+  color: white;
+}
+
+.wa-btn {
+  background: #25d366;
+  color: white;
+}
+
+.lokasi-buttons a:hover {
+  transform: translateY(-4px);
+}
+
+@media (max-width: 900px) {
+  .lokasi-container {
+    grid-template-columns: 1fr;
+  }
+
+  .lokasi-map {
+    height: 350px;
+  }
+
+  .lokasi-buttons {
+    flex-direction: column;
+  }
+}

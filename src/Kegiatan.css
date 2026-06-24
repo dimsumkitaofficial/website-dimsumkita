@@ -1,0 +1,244 @@
+.kegiatan-section {
+  padding: 100px 8%;
+  background: #ffffff;
+}
+
+.kegiatan-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.kegiatan-header h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.kegiatan-header p {
+  color: #666;
+}
+
+.kegiatan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.kegiatan-card {
+  overflow: hidden;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.kegiatan-card:hover {
+  transform: translateY(-8px);
+}
+
+.kegiatan-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.kegiatan-content {
+  padding: 25px;
+}
+
+.kegiatan-content h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.kegiatan-content span {
+  color: #ff6b00;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .kegiatan-header h2 {
+    font-size: 32px;
+  }
+}
+
+/* ================= POPUP ================= */
+
+.event-popup-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+
+  padding: 20px;
+}
+
+.event-popup {
+  width: 90%;
+  max-width: 950px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: white;
+
+  border-radius: 25px;
+
+  position: relative;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Tombol X */
+
+.event-close {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+
+  border-radius: 50%;
+
+  font-size: 32px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+  z-index: 999;
+}
+
+/* Foto popup */
+
+.event-popup-image {
+  width: 100%;
+  max-height: 320px;
+
+  object-fit: contain;
+
+  background: #f8f8f8;
+
+  border-radius: 20px;
+
+  display: block;
+
+  padding: 15px;
+}
+
+/* Isi popup */
+
+.event-popup-content {
+  padding: 35px 45px 45px;
+}
+
+.event-popup h2 {
+  font-size: 48px;
+
+  margin-bottom: 10px;
+
+  font-family: "Times New Roman", serif;
+}
+
+.event-date {
+  color: #ff6b00;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.event-line {
+  width: 80px;
+  height: 4px;
+
+  background: #ff6b00;
+
+  border-radius: 20px;
+
+  margin-bottom: 30px;
+}
+
+.event-desc {
+  font-family: "Times New Roman", serif;
+
+  text-align: justify;
+
+  line-height: 2;
+
+  font-size: 20px;
+
+  color: #444;
+
+  white-space: pre-line;
+}
+
+/* Scrollbar popup */
+
+.event-popup::-webkit-scrollbar {
+  width: 8px;
+}
+
+.event-popup::-webkit-scrollbar-thumb {
+  background: #ff6b00;
+  border-radius: 20px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .kegiatan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-popup {
+    width: 95%;
+    max-height: 90vh;
+  }
+  .event-popup-image {
+    height: 250px;
+  }
+
+  .event-popup-content {
+    padding: 25px;
+  }
+
+  .event-popup h2 {
+    font-size: 32px;
+  }
+
+  .event-desc {
+    font-size: 17px;
+  }
+}
+
+.event-image-wrapper {
+  width: 100%;
+
+  background: #f8f8f8;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  margin-bottom: 30px;
+}

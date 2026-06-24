@@ -1,4 +1,4 @@
-import "../hero.css";
+import "../Hero.css";
 import heroImage from "../assets/Background 1.jpg";
 
 export default function Hero() {

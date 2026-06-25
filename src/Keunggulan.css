@@ -22,8 +22,8 @@
 
 .keunggulan-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .keunggulan-card {
@@ -65,11 +65,39 @@
 }
 
 @media (max-width: 768px) {
+  .keunggulan-section {
+    padding: 70px 20px;
+  }
+
+  .keunggulan-header {
+    margin-bottom: 35px;
+  }
+
   .keunggulan-header h2 {
-    font-size: 32px;
+    font-size: 28px;
+  }
+
+  .keunggulan-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .keunggulan-card {
+    padding: 20px 15px;
+    border-radius: 15px;
   }
 
   .icon {
-    font-size: 45px;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .keunggulan-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .keunggulan-card p {
+    display: none;
   }
 }

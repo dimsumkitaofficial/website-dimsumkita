@@ -106,19 +106,70 @@
 }
 
 @media (max-width: 992px) {
+  .tentang-section {
+    padding: 70px 24px;
+  }
+
   .tentang-container {
     flex-direction: column;
+    gap: 40px;
+  }
+
+  .tentang-image {
+    width: 100%;
   }
 
   .tentang-image img {
-    height: 400px;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+
+  .tentang-content {
+    width: 100%;
   }
 
   .tentang-content h2 {
-    font-size: 38px;
+    font-size: 36px;
+  }
+
+  .tentang-content p {
+    text-align: left;
+    line-height: 1.8;
   }
 
   .tentang-stats {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tentang-section {
+    padding: 60px 20px;
+  }
+
+  .tentang-content h2 {
+    font-size: 28px;
+  }
+
+  .tentang-label {
+    font-size: 14px;
+  }
+
+  .tentang-content p {
+    font-size: 16px;
+  }
+
+  .stat-box {
+    padding: 16px;
+  }
+
+  .stat-box h3 {
+    font-size: 22px;
+  }
+
+  .stat-box span {
+    font-size: 13px;
   }
 }

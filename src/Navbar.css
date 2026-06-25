@@ -333,3 +333,22 @@
     width: 240px;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  .brand {
+    max-width: 70%;
+  }
+
+  .brand h2 {
+    white-space: nowrap;
+  }
+
+  .hamburger {
+    font-size: 28px;
+  }
+}

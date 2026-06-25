@@ -79,11 +79,11 @@ export default function Testimoni() {
             className="slider-image"
           />
 
+          <p className="slider-comment">"{testimonials[current].komentar}"</p>
+
+          <div className="stars">⭐⭐⭐⭐⭐</div>
+
           <div className="slider-info">
-            <div className="stars">⭐⭐⭐⭐⭐</div>
-
-            <p className="slider-comment">"{testimonials[current].komentar}"</p>
-
             <h3>{testimonials[current].nama}</h3>
           </div>
         </div>

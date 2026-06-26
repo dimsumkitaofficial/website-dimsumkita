@@ -10,26 +10,32 @@
 
 .section-title h2 {
   font-size: 42px;
+  color: #222;
   margin-bottom: 10px;
 }
 
 .section-title p {
   color: #666;
+  font-size: 18px;
 }
+
+/* ========================= */
+/* CARD MENU */
+/* ========================= */
 
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  gap: 28px;
 }
 
 .menu-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  cursor: pointer;
 
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 
   transition: 0.3s;
 }
@@ -40,259 +46,336 @@
 
 .menu-image {
   width: 100%;
-  height: 220px;
+  height: 260px;
   object-fit: cover;
-
-  border-radius: 15px;
+  display: block;
 }
 
 .menu-card h3 {
-  margin-top: 15px;
-  margin-bottom: 20px;
-
+  padding: 18px;
+  text-align: center;
   font-size: 22px;
+  color: #222;
 }
 
-.price-list {
-  margin-bottom: 20px;
-}
-
-.price-list div {
-  display: flex;
-  justify-content: space-between;
-
-  padding: 8px 0;
-
-  border-bottom: 1px solid #eee;
-}
-
-.menu-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.menu-buttons a {
-  text-decoration: none;
-
-  padding: 12px;
-
-  border-radius: 10px;
-
-  color: white;
-
-  font-weight: 600;
-}
-
-.menu-buttons a:first-child {
-  background: #25d366;
-}
-
-.menu-buttons a:last-child {
-  background: #ff6b00;
-}
+/* ========================= */
+/* POPUP */
+/* ========================= */
 
 .popup-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+
+  background: rgba(0, 0, 0, 0.75);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  z-index: 9999;
+  padding: 20px;
+
+  z-index: 99999;
 }
 
 .popup-content {
-  background: white;
-  width: 90%;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1050px;
+
+  background: #fff;
 
   border-radius: 25px;
 
   padding: 35px;
 
   position: relative;
+
+  animation: popup 0.25s ease;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .close-popup {
   position: absolute;
-  right: 20px;
-  top: 15px;
 
-  font-size: 30px;
+  top: 18px;
+  right: 22px;
+
+  font-size: 34px;
 
   cursor: pointer;
+
+  color: #888;
+
+  transition: 0.3s;
 }
 
-.popup-image {
-  width: 100%;
-  height: 300px;
-
-  object-fit: cover;
-
-  border-radius: 15px;
-}
-
-.popup-content h2 {
-  margin-top: 20px;
-}
-
-.popup-content p {
-  color: #555;
-}
-
-.popup-prices {
-  margin-top: 20px;
-  text-align: left;
-}
-
-.popup-prices p {
-  margin: 8px 0;
-}
-
-.popup-wa {
-  display: block;
-
-  margin-top: 20px;
-
-  background: #25d366;
-  color: white;
-
-  text-decoration: none;
-
-  padding: 14px;
-
-  border-radius: 12px;
-
-  font-weight: bold;
+.close-popup:hover {
+  color: #ff6b00;
 }
 
 .popup-layout {
-  display: flex;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
   gap: 35px;
-  align-items: flex-start;
-}
 
-.popup-left {
-  flex: 1;
-}
-
-.popup-right {
-  flex: 1;
+  align-items: start;
 }
 
 .popup-image {
   width: 100%;
-  height: 450px;
+
+  height: 470px;
+
   object-fit: cover;
-  border-radius: 15px;
+
+  border-radius: 18px;
 }
 
 .popup-right h2 {
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: 38px;
+
+  color: #222;
+
   margin-bottom: 15px;
 }
 
 .title-line {
-  width: 450px;
+  width: 120px;
   height: 4px;
+
   background: #ff6b00;
+
   border-radius: 20px;
-  margin-bottom: 20px;
+
+  margin-bottom: 22px;
 }
 
 .popup-desc {
   color: #666;
-  line-height: 1.8;
+
+  line-height: 1.9;
+
   margin-bottom: 25px;
 }
 
 .popup-prices {
   border: 1px solid #eee;
-  border-radius: 15px;
+
+  border-radius: 18px;
+
   overflow: hidden;
 }
 
 .price-row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 20px;
-  border-bottom: 1px solid #eee;
-}
 
-.price-right {
-  display: flex;
+  justify-content: space-between;
+
   align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
+
+  padding: 16px 20px;
+
+  border-bottom: 1px solid #eee;
 }
 
 .price-row:last-child {
   border-bottom: none;
 }
 
+.price-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
 .bonus {
-  background: #ff8c1a;
+  background: #ff6b00;
+
   color: white;
 
   font-size: 11px;
 
-  padding: 5px 10px;
+  padding: 4px 10px;
 
-  border-radius: 20px;
+  border-radius: 30px;
 
-  white-space: nowrap;
+  font-weight: 600;
 }
 
 .popup-wa {
   display: block;
+
   margin-top: 25px;
+
   background: #25d366;
+
   color: white;
+
   text-align: center;
+
   padding: 18px;
-  border-radius: 15px;
-  text-decoration: none;
-  font-size: 20px;
+
+  border-radius: 14px;
+
   font-weight: 700;
+
+  font-size: 18px;
+
+  text-decoration: none;
+
+  transition: 0.3s;
 }
 
-@media (max-width: 768px) {
+.popup-wa:hover {
+  background: #1fb958;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 992px) {
   .menu-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .popup-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .popup-image {
+    height: 380px;
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .menu-section {
+    padding: 80px 20px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  .section-title p {
+    font-size: 15px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+  .menu-card {
+    border-radius: 18px;
+  }
+
+  .menu-image {
+    height: 150px;
+  }
+
+  .menu-card h3 {
+    padding: 14px 10px;
+
+    font-size: 17px;
+  }
+
+  .popup-content {
+    padding: 22px;
+
+    max-height: 92vh;
+
+    overflow-y: auto;
+  }
+
+  .popup-layout {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .popup-image {
+    height: 250px;
+  }
+
+  .popup-right h2 {
+    font-size: 26px;
+  }
+
+  .title-line {
+    width: 90px;
+  }
+
+  .popup-desc {
+    font-size: 15px;
+  }
+
+  .price-row {
+    padding: 14px;
+
+    font-size: 15px;
+  }
+
+  .price-right {
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+  }
+
+  .popup-wa {
+    padding: 15px;
+
+    font-size: 16px;
+  }
+
+  .close-popup {
+    font-size: 30px;
+  }
+}
+
+/* ========================= */
+/* HP KECIL */
+/* ========================= */
+
+@media (max-width: 430px) {
+  .menu-grid {
     gap: 12px;
   }
 
-  .menu-card img {
+  .menu-image {
     height: 130px;
   }
 
   .menu-card h3 {
-    font-size: 16px;
-  }
-
-  .popup-layout {
-    flex-direction: column;
-  }
-
-  .popup-left,
-  .popup-right {
-    width: 100%;
+    font-size: 15px;
   }
 
   .popup-image {
-    height: 280px;
-  }
-
-  .popup-right h2 {
-    font-size: 28px;
-  }
-
-  .price-row {
-    padding: 12px;
+    height: 220px;
   }
 }

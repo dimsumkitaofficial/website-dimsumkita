@@ -50,7 +50,6 @@ Grand Opening Dimsum Kita berlangsung meriah dengan berbagai promo spesial. Acar
             className="kegiatan-card"
             data-aos="zoom-in"
             data-aos-delay={index * 120}
-            onClick={() => setSelectedEvent(item)}
           >
             <div className="kegiatan-image-wrapper">
               <img
@@ -65,7 +64,13 @@ Grand Opening Dimsum Kita berlangsung meriah dengan berbagai promo spesial. Acar
 
               <h3>{item.title}</h3>
 
-              <button className="lihat-event">Lihat Detail</button>
+              <button
+                className="lihat-event"
+                onClick={() => setSelectedEvent(item)}
+              >
+                Lihat Detail
+                <span>→</span>
+              </button>
             </div>
           </div>
         ))}

@@ -1,21 +1,22 @@
 .keunggulan-section {
   padding: 100px 8%;
-  background: #fff;
+  background: linear-gradient(to bottom, #ffffff, #fff8f3);
 }
 
 .keunggulan-header {
+  max-width: 760px;
+  margin: 0 auto 60px;
   text-align: center;
-  max-width: 700px;
-  margin: auto;
-  margin-bottom: 60px;
 }
 
 .keunggulan-header h2 {
   font-size: 42px;
+  color: #222;
   margin-bottom: 15px;
 }
 
 .keunggulan-header p {
+  font-size: 18px;
   color: #666;
   line-height: 1.8;
 }
@@ -23,73 +24,95 @@
 .keunggulan-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
 .keunggulan-card {
-  background: white;
-
+  background: #fff;
+  border: 1px solid #f3e5d8;
+  border-radius: 24px;
   padding: 35px 25px;
-
-  border-radius: 20px;
-
   text-align: center;
-
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-
-  transition: all 0.3s ease;
+  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .keunggulan-card:hover {
   transform: translateY(-10px);
-
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  border-color: #ff6b00;
+  box-shadow: 0 18px 40px rgba(255, 107, 0, 0.15);
 }
 
 .icon {
-  font-size: 55px;
-
-  margin-bottom: 20px;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #fff3e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
 }
 
 .keunggulan-card h3 {
-  margin-bottom: 15px;
-
   font-size: 22px;
+  color: #222;
+  margin-bottom: 15px;
 }
 
 .keunggulan-card p {
   color: #666;
-
   line-height: 1.8;
+  font-size: 15px;
 }
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 992px) {
+  .keunggulan-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
 
 @media (max-width: 768px) {
   .keunggulan-section {
-    padding: 70px 20px;
+    padding: 80px 20px;
   }
 
   .keunggulan-header {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
   }
 
   .keunggulan-header h2 {
-    font-size: 28px;
+    font-size: 30px;
+  }
+
+  .keunggulan-header p {
+    font-size: 15px;
   }
 
   .keunggulan-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 15px;
   }
 
   .keunggulan-card {
-    padding: 20px 15px;
-    border-radius: 15px;
+    padding: 22px 16px;
+    border-radius: 18px;
   }
 
   .icon {
-    font-size: 32px;
-    margin-bottom: 10px;
+    width: 58px;
+    height: 58px;
+    font-size: 28px;
+    margin-bottom: 14px;
   }
 
   .keunggulan-card h3 {
@@ -98,6 +121,36 @@
   }
 
   .keunggulan-card p {
-    display: none;
+    display: block;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* ========================= */
+/* HP KECIL */
+/* ========================= */
+
+@media (max-width: 430px) {
+  .keunggulan-grid {
+    gap: 12px;
+  }
+
+  .keunggulan-card {
+    padding: 18px 12px;
+  }
+
+  .icon {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+
+  .keunggulan-card h3 {
+    font-size: 15px;
+  }
+
+  .keunggulan-card p {
+    font-size: 12px;
   }
 }

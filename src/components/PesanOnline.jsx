@@ -31,6 +31,15 @@ export default function PesanOnline() {
           >
             ShopeeFood
           </a>
+
+          <a
+            href="LINK_GOFOOD"
+            target="_blank"
+            rel="noreferrer"
+            className="gofood-btn"
+          >
+            GoFood
+          </a>
         </div>
       </div>
     </section>

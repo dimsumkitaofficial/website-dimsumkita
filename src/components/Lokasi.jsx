@@ -52,12 +52,6 @@ export default function Lokasi() {
             <p>Bisa Diantar/Diambil/COD</p>
           </div>
 
-          <div className="info-card">
-            <h3>📞 WhatsApp</h3>
-
-            <p>0895-0731-0566</p>
-          </div>
-
           <div className="lokasi-buttons">
             <a
               href="https://maps.app.goo.gl/ACTwgZ4fwKqN26AaA"

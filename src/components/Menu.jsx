@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../Menu.css";
 
 import Original from "../assets/Original.jpg";
@@ -8,58 +8,54 @@ import Mushroom from "../assets/Mushroom.jpg";
 
 export default function Menu() {
   const [selectedProduct, setSelectedProduct] = useState(null);
+
+  useEffect(() => {
+    if (selectedProduct) {
+      document.body.classList.add("popup-open");
+    } else {
+      document.body.classList.remove("popup-open");
+    }
+
+    return () => document.body.classList.remove("popup-open");
+  }, [selectedProduct]);
+
   const products = [
     {
       nama: "Dimsum Original",
       foto: Original,
-
       deskripsi:
         "Dimsum ayam premium dengan rasa gurih, lembut, dan dibuat fresh setiap hari.",
-
       bonus: false,
-
       harga4: "Rp12.000",
       harga6: "Rp18.000",
       harga12: "Rp36.000",
       harga16: "Rp50.000",
     },
-
     {
       nama: "Dimsum Mentai",
       foto: Mentai,
-
       deskripsi: "Dimsum dengan topping mentai premium yang creamy dan lezat.",
-
       bonus: true,
-
       harga4: "Rp18.000",
       harga6: "Rp26.000",
       harga12: "Rp54.000",
       harga16: "Rp70.000",
     },
-
     {
       nama: "Dimsum Mozzarella",
       foto: Mozzarella,
-
       deskripsi: "Dimsum mozzarella dengan keju lumer yang melimpah.",
-
       bonus: true,
-
       harga4: "Rp18.000",
       harga6: "Rp26.000",
       harga12: "Rp54.000",
       harga16: "Rp70.000",
     },
-
     {
       nama: "Dimsum Mushroom",
       foto: Mushroom,
-
       deskripsi: "Dimsum mushroom dengan cita rasa jamur yang unik dan gurih.",
-
       bonus: true,
-
       harga4: "Rp16.000",
       harga6: "Rp22.000",
       harga12: "Rp40.000",
@@ -71,13 +67,13 @@ export default function Menu() {
     <section data-aos="fade-up" id="menu" className="menu-section">
       <div className="section-title">
         <h2>Menu Dimsum Kita</h2>
-
         <p>Pilih menu favoritmu dan pesan dengan mudah</p>
       </div>
 
       <div className="menu-grid">
         {products.map((item, index) => (
           <div
+            key={index}
             className="menu-card"
             data-aos="zoom-in"
             data-aos-delay={index * 100}
@@ -88,7 +84,6 @@ export default function Menu() {
               className="menu-image"
               onClick={() => setSelectedProduct(item)}
             />
-
             <h3>{item.nama}</h3>
           </div>
         ))}
@@ -155,21 +150,21 @@ export default function Menu() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            <a
-              className="popup-wa"
-              href={`https://wa.me/6289507310566?text=${encodeURIComponent(
-                `Halo Admin Dimsum Kita,
+                <a
+                  className="popup-wa"
+                  href={`https://wa.me/6289507310566?text=${encodeURIComponent(
+                    `Halo Admin Dimsum Kita,
 
 Saya ingin memesan ${selectedProduct.nama}.`,
-              )}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Pesan via WhatsApp
-            </a>
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Pesan via WhatsApp
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       )}

@@ -34,9 +34,7 @@
   border-radius: 22px;
   overflow: hidden;
   cursor: pointer;
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
   transition: 0.3s;
 }
 
@@ -65,7 +63,6 @@
 .popup-overlay {
   position: fixed;
   inset: 0;
-
   background: rgba(0, 0, 0, 0.75);
 
   display: flex;
@@ -83,7 +80,7 @@
 
   background: #fff;
 
-  border-radius: 25px;
+  border-radius: 24px;
 
   padding: 35px;
 
@@ -106,15 +103,14 @@
 
 .close-popup {
   position: absolute;
-
   top: 18px;
   right: 22px;
 
   font-size: 34px;
 
-  cursor: pointer;
-
   color: #888;
+
+  cursor: pointer;
 
   transition: 0.3s;
 }
@@ -125,64 +121,47 @@
 
 .popup-layout {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 35px;
-
   align-items: start;
 }
 
 .popup-image {
   width: 100%;
-
   height: 470px;
-
   object-fit: cover;
-
   border-radius: 18px;
 }
 
 .popup-right h2 {
   font-size: 38px;
-
   color: #222;
-
   margin-bottom: 15px;
 }
 
 .title-line {
   width: 120px;
   height: 4px;
-
   background: #ff6b00;
-
   border-radius: 20px;
-
   margin-bottom: 22px;
 }
 
 .popup-desc {
   color: #666;
-
   line-height: 1.9;
-
   margin-bottom: 25px;
 }
 
 .popup-prices {
   border: 1px solid #eee;
-
   border-radius: 18px;
-
   overflow: hidden;
 }
 
 .price-row {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
 
   padding: 16px 20px;
@@ -196,16 +175,13 @@
 
 .price-right {
   display: flex;
-
   align-items: center;
-
   gap: 10px;
 }
 
 .bonus {
   background: #ff6b00;
-
-  color: white;
+  color: #fff;
 
   font-size: 11px;
 
@@ -214,6 +190,8 @@
   border-radius: 30px;
 
   font-weight: 600;
+
+  white-space: nowrap;
 }
 
 .popup-wa {
@@ -222,7 +200,6 @@
   margin-top: 25px;
 
   background: #25d366;
-
   color: white;
 
   text-align: center;
@@ -231,11 +208,10 @@
 
   border-radius: 14px;
 
-  font-weight: 700;
+  text-decoration: none;
 
   font-size: 18px;
-
-  text-decoration: none;
+  font-weight: 700;
 
   transition: 0.3s;
 }
@@ -285,7 +261,6 @@
 
   .menu-grid {
     grid-template-columns: repeat(2, 1fr);
-
     gap: 15px;
   }
 
@@ -299,16 +274,22 @@
 
   .menu-card h3 {
     padding: 14px 10px;
-
     font-size: 17px;
   }
 
-  .popup-content {
-    padding: 22px;
+  /* ===== POPUP HP ===== */
 
-    max-height: 92vh;
+  .popup-content {
+    width: 94%;
+    max-width: 420px;
+
+    max-height: 84vh;
 
     overflow-y: auto;
+
+    padding: 20px;
+
+    border-radius: 18px;
   }
 
   .popup-layout {
@@ -316,45 +297,69 @@
 
     flex-direction: column;
 
-    gap: 20px;
+    gap: 18px;
   }
 
   .popup-image {
-    height: 250px;
+    height: 190px;
+
+    border-radius: 15px;
   }
 
   .popup-right h2 {
-    font-size: 26px;
+    font-size: 22px;
+
+    margin-bottom: 8px;
   }
 
   .title-line {
-    width: 90px;
+    width: 80px;
+
+    margin-bottom: 16px;
   }
 
   .popup-desc {
-    font-size: 15px;
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
   }
 
   .price-row {
-    padding: 14px;
+    padding: 12px;
 
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .price-right {
     flex-wrap: wrap;
 
     justify-content: flex-end;
+
+    gap: 6px;
+  }
+
+  .bonus {
+    font-size: 10px;
+
+    padding: 3px 8px;
   }
 
   .popup-wa {
-    padding: 15px;
+    margin-top: 18px;
+
+    padding: 14px;
 
     font-size: 16px;
   }
 
   .close-popup {
-    font-size: 30px;
+    font-size: 28px;
+
+    top: 14px;
+
+    right: 16px;
   }
 }
 
@@ -376,6 +381,21 @@
   }
 
   .popup-image {
-    height: 220px;
+    height: 170px;
   }
+}
+
+/* ========================= */
+/* SAAT POPUP DIBUKA */
+/* ========================= */
+
+body.popup-open {
+  overflow: hidden;
+}
+
+body.popup-open .floating-wa,
+body.popup-open .back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }

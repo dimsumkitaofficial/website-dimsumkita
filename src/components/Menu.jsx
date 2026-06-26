@@ -12,21 +12,12 @@ export default function Menu() {
   useEffect(() => {
     if (selectedProduct) {
       document.body.classList.add("popup-open");
-      document.documentElement.classList.add("popup-open");
-      document.body.style.overflow = "hidden";
-      document.documentElement.style.overflow = "hidden";
     } else {
       document.body.classList.remove("popup-open");
-      document.documentElement.classList.remove("popup-open");
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
     }
 
     return () => {
       document.body.classList.remove("popup-open");
-      document.documentElement.classList.remove("popup-open");
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
     };
   }, [selectedProduct]);
 

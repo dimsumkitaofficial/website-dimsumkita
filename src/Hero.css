@@ -1,17 +1,20 @@
 .hero {
+  width: 100%;
   min-height: 100vh;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-
-  position: relative;
 }
 
 .overlay {
+  width: 100%;
   min-height: 100vh;
-
-  background: rgba(0, 0, 0, 0.55);
 
   display: flex;
   justify-content: center;
@@ -19,79 +22,138 @@
 
   text-align: center;
 
-  padding: 0 30px;
+  background: rgba(0, 0, 0, 0.6);
+
+  padding: 100px 30px 60px;
 }
 
 .hero-content {
-  max-width: 1000px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .hero-content h1 {
-  font-size: 72px;
-  line-height: 1.2;
+  color: #fff;
+  font-size: 68px;
   font-weight: 800;
-  color: white;
-
-  margin-bottom: 25px;
+  line-height: 1.15;
+  margin-bottom: 24px;
 }
 
 .hero-content p {
-  font-size: 24px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 22px;
   line-height: 1.8;
-  color: white;
-
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 .hero-buttons {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
 .hero-buttons a {
   text-decoration: none;
-  padding: 15px 30px;
-  border-radius: 12px;
   background: #ff6b00;
   color: white;
+  padding: 15px 34px;
+  border-radius: 12px;
   font-weight: 600;
+  transition: 0.3s;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    min-height: auto;
-  }
+.hero-buttons a:hover {
+  background: #e55f00;
+  transform: translateY(-2px);
+}
 
-  .overlay {
-    min-height: 100vh;
-    padding: 100px 20px 50px;
-  }
+/* ================= DESKTOP BESAR ================= */
 
-  .hero-content {
-    width: 100%;
-  }
-
+@media (min-width: 1400px) {
   .hero-content h1 {
-    font-size: 34px !important;
-    line-height: 1.2;
-    margin-bottom: 15px;
+    font-size: 78px;
   }
 
   .hero-content p {
-    font-size: 16px !important;
-    line-height: 1.7;
-    margin-bottom: 25px;
+    font-size: 24px;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 52px;
+  }
+
+  .hero-content p {
+    font-size: 20px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    background-position: center;
+  }
+
+  .overlay {
+    min-height: 100svh;
+
+    padding: 100px 24px 60px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+  }
+
+  .hero-content p {
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 28px;
   }
 
   .hero-buttons {
+    width: 100%;
+
     flex-direction: column;
-    gap: 12px;
+
+    gap: 15px;
   }
 
   .hero-buttons a {
     width: 100%;
-    padding: 14px;
+
+    max-width: 340px;
+
+    text-align: center;
+  }
+}
+
+/* ================= HP KECIL ================= */
+
+@media (max-width: 430px) {
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
   }
 }

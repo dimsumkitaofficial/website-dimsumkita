@@ -160,7 +160,7 @@ export default function Menu() {
 
             <a
               className="popup-wa"
-              href={`https://wa.me/6281234567890?text=${encodeURIComponent(
+              href={`https://wa.me/6289507310566?text=${encodeURIComponent(
                 `Halo Admin Dimsum Kita,
 
 Saya ingin memesan ${selectedProduct.nama}.`,

@@ -5,15 +5,28 @@ import Event1 from "../assets/Grand Opening.jpg";
 
 export default function Kegiatan() {
   const [selectedEvent, setSelectedEvent] = useState(null);
+
   useEffect(() => {
     if (selectedEvent) {
       document.body.style.overflow = "hidden";
+      document.body.classList.add("popup-open");
     } else {
       document.body.style.overflow = "auto";
+      document.body.classList.remove("popup-open");
     }
+
+    const handleEsc = (e) => {
+      if (e.key === "Escape") {
+        setSelectedEvent(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleEsc);
 
     return () => {
       document.body.style.overflow = "auto";
+      document.body.classList.remove("popup-open");
+      window.removeEventListener("keydown", handleEsc);
     };
   }, [selectedEvent]);
 
@@ -32,7 +45,7 @@ Grand Opening Dimsum Kita berlangsung meriah dengan berbagai promo spesial. Acar
   ];
 
   return (
-    <section data-aos="fade-left" id="kegiatan" className="kegiatan-section">
+    <section id="kegiatan" className="kegiatan-section" data-aos="fade-up">
       <div className="kegiatan-header">
         <h2>Kegiatan & Event</h2>
 
@@ -45,18 +58,26 @@ Grand Opening Dimsum Kita berlangsung meriah dengan berbagai promo spesial. Acar
       <div className="kegiatan-grid">
         {kegiatan.map((item, index) => (
           <div
-            className="kegiatan-card"
-            data-aos="fade-up"
-            data-aos-delay={index * 150}
             key={index}
+            className="kegiatan-card"
+            data-aos="zoom-in"
+            data-aos-delay={index * 120}
             onClick={() => setSelectedEvent(item)}
           >
-            <img src={item.foto} alt={item.title} className="kegiatan-image" />
+            <div className="kegiatan-image-wrapper">
+              <img
+                src={item.foto}
+                alt={item.title}
+                className="kegiatan-image"
+              />
+            </div>
 
             <div className="kegiatan-content">
+              <span className="kegiatan-date">{item.tanggal}</span>
+
               <h3>{item.title}</h3>
 
-              <span>{item.tanggal}</span>
+              <button className="lihat-event">Lihat Detail</button>
             </div>
           </div>
         ))}
@@ -68,14 +89,14 @@ Grand Opening Dimsum Kita berlangsung meriah dengan berbagai promo spesial. Acar
           onClick={() => setSelectedEvent(null)}
         >
           <div className="event-popup" onClick={(e) => e.stopPropagation()}>
-            <span
+            <button
               className="event-close"
               onClick={() => setSelectedEvent(null)}
             >
               ×
-            </span>
+            </button>
 
-            <div className="event-image-wrapper">
+            <div className="event-image-wrapper-popup">
               <img
                 src={selectedEvent.foto}
                 alt={selectedEvent.title}
@@ -84,9 +105,9 @@ Grand Opening Dimsum Kita berlangsung meriah dengan berbagai promo spesial. Acar
             </div>
 
             <div className="event-popup-content">
-              <h2>{selectedEvent.title}</h2>
+              <span className="event-date">{selectedEvent.tanggal}</span>
 
-              <p className="event-date">{selectedEvent.tanggal}</p>
+              <h2>{selectedEvent.title}</h2>
 
               <div className="event-line"></div>
 

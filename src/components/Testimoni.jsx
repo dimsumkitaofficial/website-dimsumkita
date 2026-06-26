@@ -40,7 +40,7 @@ export default function Testimoni() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-    }, 4000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, [testimonials.length]);
@@ -60,14 +60,7 @@ export default function Testimoni() {
         <p>Apa kata pelanggan tentang Dimsum Kita</p>
       </div>
 
-      <div
-        className="testimoni-slider"
-        style={{
-          backgroundImage: `url(${testimonials[current].foto})`,
-        }}
-      >
-        <div className="slider-overlay"></div>
-
+      <div className="testimoni-slider">
         <button className="slider-btn left" onClick={prevSlide}>
           ❮
         </button>
@@ -79,13 +72,11 @@ export default function Testimoni() {
             className="slider-image"
           />
 
-          <p className="slider-comment">"{testimonials[current].komentar}"</p>
-
           <div className="stars">⭐⭐⭐⭐⭐</div>
 
-          <div className="slider-info">
-            <h3>{testimonials[current].nama}</h3>
-          </div>
+          <h3 className="customer-name">{testimonials[current].nama}</h3>
+
+          <p className="slider-comment">"{testimonials[current].komentar}"</p>
         </div>
 
         <button className="slider-btn right" onClick={nextSlide}>

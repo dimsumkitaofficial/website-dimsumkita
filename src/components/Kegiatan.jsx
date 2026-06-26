@@ -8,25 +8,22 @@ export default function Kegiatan() {
 
   useEffect(() => {
     if (selectedEvent) {
-      document.body.style.overflow = "hidden";
       document.body.classList.add("popup-open");
+      document.documentElement.classList.add("popup-open");
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto";
       document.body.classList.remove("popup-open");
+      document.documentElement.classList.remove("popup-open");
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     }
 
-    const handleEsc = (e) => {
-      if (e.key === "Escape") {
-        setSelectedEvent(null);
-      }
-    };
-
-    window.addEventListener("keydown", handleEsc);
-
     return () => {
-      document.body.style.overflow = "auto";
       document.body.classList.remove("popup-open");
-      window.removeEventListener("keydown", handleEsc);
+      document.documentElement.classList.remove("popup-open");
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     };
   }, [selectedEvent]);
 

@@ -72,11 +72,15 @@
   padding: 20px;
 
   z-index: 99999;
+  overflow: hidden;
 }
 
 .popup-content {
   width: 100%;
   max-width: 1050px;
+
+  max-height: 90vh;
+  overflow-y: auto;
 
   background: #fff;
 
@@ -386,11 +390,15 @@
 }
 
 /* ========================= */
-/* SAAT POPUP DIBUKA */
+/* SAAT POPUP TERBUKA */
 /* ========================= */
 
+html.popup-open,
 body.popup-open {
   overflow: hidden;
+  height: 100%;
+  touch-action: none;
+  overscroll-behavior: none;
 }
 
 body.popup-open .floating-wa,
@@ -398,4 +406,14 @@ body.popup-open .back-to-top {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: 0.3s;
+}
+
+.popup-overlay {
+  overscroll-behavior: contain;
+}
+
+.popup-content {
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }

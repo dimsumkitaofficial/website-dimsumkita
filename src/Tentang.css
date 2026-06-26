@@ -1,87 +1,124 @@
 .tentang-section {
-  padding: 100px 8%;
+  padding: 110px 8%;
   background: #fff;
 }
 
 .tentang-container {
   display: flex;
   align-items: center;
-  gap: 70px;
+  justify-content: space-between;
+  gap: 80px;
 }
+
+/* ========================= */
+/* IMAGE */
+/* ========================= */
 
 .tentang-image {
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .tentang-image img {
   width: 100%;
-  height: 550px;
+  max-width: 470px;
+  aspect-ratio: 1/1;
 
   object-fit: cover;
 
   border-radius: 30px;
 
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  background: #fff;
+
+  padding: 18px;
+
+  border: 1px solid #eee;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
 }
+
+.tentang-image img:hover {
+  transform: translateY(-8px);
+}
+
+/* ========================= */
+/* CONTENT */
+/* ========================= */
 
 .tentang-content {
   flex: 1;
 }
 
 .tentang-label {
+  display: inline-block;
+
   color: #ff6b00;
+
+  font-size: 14px;
 
   font-weight: 700;
 
   letter-spacing: 2px;
+
+  margin-bottom: 12px;
 }
 
 .tentang-content h2 {
   font-size: 48px;
 
-  margin-top: 10px;
+  color: #222;
+
   margin-bottom: 15px;
 }
 
 .tentang-line {
-  width: 80px;
+  width: 90px;
   height: 4px;
 
   background: #ff6b00;
 
-  border-radius: 20px;
+  border-radius: 50px;
 
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .tentang-content p {
-  color: #555;
+  color: #666;
+
+  font-size: 17px;
 
   line-height: 2;
 
-  margin-bottom: 18px;
-
   text-align: justify;
+
+  margin-bottom: 18px;
 }
 
+/* ========================= */
+/* STATS */
+/* ========================= */
+
 .tentang-stats {
-  margin-top: 35px;
+  margin-top: 40px;
 
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
 
-  gap: 15px;
+  gap: 18px;
 }
 
 .stat-box {
   background: #fffaf5;
 
-  border: 1px solid #ffe0c2;
+  border: 1px solid #ffe4cb;
 
-  border-radius: 18px;
+  border-radius: 20px;
 
-  padding: 20px;
+  padding: 22px 15px;
 
   text-align: center;
 
@@ -89,30 +126,41 @@
 }
 
 .stat-box:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+
+  box-shadow: 0 12px 28px rgba(255, 107, 0, 0.12);
 }
 
 .stat-box h3 {
   color: #ff6b00;
 
-  font-size: 24px;
+  font-size: 26px;
 
   margin-bottom: 8px;
+
+  font-weight: 700;
 }
 
 .stat-box span {
   color: #666;
+
   font-size: 14px;
+
+  line-height: 1.5;
 }
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
 
 @media (max-width: 992px) {
   .tentang-section {
-    padding: 70px 24px;
+    padding: 90px 25px;
   }
 
   .tentang-container {
     flex-direction: column;
-    gap: 40px;
+    gap: 45px;
   }
 
   .tentang-image {
@@ -120,9 +168,9 @@
   }
 
   .tentang-image img {
-    width: 100%;
+    max-width: 420px;
+
     height: auto;
-    max-height: 400px;
   }
 
   .tentang-content {
@@ -130,39 +178,73 @@
   }
 
   .tentang-content h2 {
-    font-size: 36px;
+    font-size: 38px;
   }
 
   .tentang-content p {
     text-align: left;
-    line-height: 1.8;
   }
 
   .tentang-stats {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
   }
 }
 
-@media (max-width: 576px) {
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
   .tentang-section {
-    padding: 60px 20px;
+    padding: 80px 20px;
   }
 
-  .tentang-content h2 {
-    font-size: 28px;
+  .tentang-container {
+    gap: 35px;
+  }
+
+  .tentang-image img {
+    max-width: 260px;
+
+    padding: 12px;
+
+    border-radius: 24px;
   }
 
   .tentang-label {
-    font-size: 14px;
+    font-size: 13px;
+  }
+
+  .tentang-content h2 {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+  }
+
+  .tentang-line {
+    width: 75px;
+
+    margin-bottom: 22px;
   }
 
   .tentang-content p {
-    font-size: 16px;
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    text-align: left;
+  }
+
+  .tentang-stats {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
   }
 
   .stat-box {
-    padding: 16px;
+    padding: 18px 10px;
+
+    border-radius: 16px;
   }
 
   .stat-box h3 {
@@ -171,5 +253,23 @@
 
   .stat-box span {
     font-size: 13px;
+  }
+}
+
+/* ========================= */
+/* HP KECIL */
+/* ========================= */
+
+@media (max-width: 430px) {
+  .tentang-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tentang-image img {
+    max-width: 220px;
+  }
+
+  .tentang-content h2 {
+    font-size: 28px;
   }
 }

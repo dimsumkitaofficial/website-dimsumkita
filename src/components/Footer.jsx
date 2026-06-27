@@ -4,7 +4,7 @@ import logo from "../assets/Logo RB.png";
 
 import waIcon from "../assets/icons/WA.png";
 import emailIcon from "../assets/icons/Email.png";
-import igIcon from "../assets/icons/IGpng";
+import igIcon from "../assets/icons/IG.png";
 import tiktokIcon from "../assets/icons/TikTok.png";
 
 import meatIcon from "../assets/icons/FullDaging.png";

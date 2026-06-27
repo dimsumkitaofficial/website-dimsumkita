@@ -1,6 +1,6 @@
-/* =========================================
+/* =====================================================
    FOOTER
-========================================= */
+===================================================== */
 
 .footer {
   background: #171717;
@@ -8,374 +8,343 @@
   overflow: hidden;
 }
 
-/* =========================================
-   WRAPPER
-========================================= */
+/* =====================================================
+   TOP
+===================================================== */
 
-.footer-wrapper {
-  max-width: 1250px;
+.footer-top {
+  max-width: 1300px;
   margin: auto;
+  padding: 70px 40px 55px;
 
-  padding: 80px 40px 55px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  gap: 70px;
+  display: grid;
+  grid-template-columns: 140px 1.6fr 1fr 1fr;
+  gap: 45px;
+  align-items: start;
 }
 
-/* =========================================
-   BRAND
-========================================= */
+/* =====================================================
+   LOGO
+===================================================== */
 
-.footer-brand {
-  flex: 1.2;
+.footer-logo-area {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .footer-logo {
-  width: 130px;
-  display: block;
-  margin-bottom: 28px;
+  width: 120px;
+  height: auto;
+  object-fit: contain;
 }
 
+/* =====================================================
+   BRAND
+===================================================== */
+
 .footer-brand h2 {
-  font-size: 50px;
+  font-size: 42px;
   color: #ff6b00;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
+  line-height: 1;
 }
 
 .footer-tagline {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 10px;
 
-  font-size: 22px;
+  margin-bottom: 22px;
+
+  color: #ffc37d;
+  font-size: 18px;
   font-weight: 700;
-
-  color: #ffc27c;
-
-  margin-bottom: 30px;
 }
 
 .footer-brand p {
-  max-width: 480px;
+  max-width: 470px;
 
-  font-size: 19px;
-  line-height: 1.9;
+  color: #d9d9d9;
 
-  color: #dddddd;
-}
-
-/* =========================================
-   RIGHT
-========================================= */
-
-.footer-right {
-  display: flex;
-  gap: 90px;
-}
-
-.footer-box {
-  min-width: 270px;
-}
-
-.footer-box h3 {
-  font-size: 34px;
-
-  color: #ff6b00;
+  font-size: 17px;
+  line-height: 1.8;
 
   margin-bottom: 30px;
 }
 
-/* =========================================
-   LINK
-========================================= */
+.footer-brand strong {
+  color: #ffffff;
+}
 
-.footer-box a {
+/* =====================================================
+   FEATURE
+===================================================== */
+
+.footer-feature {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.feature-item {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
 
-  gap: 18px;
+.feature-item img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
 
-  margin-bottom: 22px;
-
+.feature-item span {
+  font-size: 15px;
+  font-weight: 600;
   color: #f4f4f4;
+}
+
+/* =====================================================
+   COLUMN
+===================================================== */
+
+.footer-column h3 {
+  color: #ff6b00;
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+.footer-column a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 
   text-decoration: none;
+  color: #ececec;
+
+  margin-bottom: 18px;
 
   transition: 0.3s;
 }
 
-.footer-box a:hover {
-  transform: translateX(8px);
-  color: #ffb36a;
+.footer-column a:hover {
+  color: #ffb15d;
+  transform: translateX(6px);
 }
 
-.footer-box img {
-  width: 55px;
-  height: 55px;
-
+.footer-column img {
+  width: 28px;
+  height: 28px;
   object-fit: contain;
-
   flex-shrink: 0;
 }
 
-.footer-box span {
-  font-size: 22px;
+.footer-column span {
+  font-size: 15px;
   line-height: 1.6;
-
   word-break: break-word;
 }
 
-/* =========================================
-   FEATURE
-========================================= */
-
-.footer-feature {
-  max-width: 1200px;
-
-  margin: auto;
-
-  padding: 0 40px 60px;
-
-  display: flex;
-  justify-content: center;
-
-  gap: 90px;
-
-  flex-wrap: wrap;
-}
-
-.feature-card {
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  gap: 12px;
-}
-
-.feature-card img {
-  width: 55px;
-  height: 55px;
-
-  object-fit: contain;
-}
-
-.feature-card span {
-  font-size: 20px;
-
-  color: white;
-
-  font-weight: 600;
-}
-
-/* =========================================
+/* =====================================================
    COPYRIGHT
-========================================= */
+===================================================== */
 
 .footer-bottom {
+  margin-top: 15px;
+
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 
   text-align: center;
 
-  padding: 28px;
+  padding: 22px;
 
-  color: #cfcfcf;
+  color: #bdbdbd;
 
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .footer-bottom strong {
   color: #ff6b00;
 }
 
-/* =========================================
+/* =====================================================
    TABLET
-========================================= */
+===================================================== */
 
 @media (max-width: 1100px) {
-  .footer-wrapper {
-    flex-direction: column;
+  .footer-top {
+    grid-template-columns: 1fr;
 
-    gap: 55px;
-  }
-
-  .footer-right {
-    width: 100%;
-
-    justify-content: space-between;
-
-    gap: 50px;
-  }
-
-  .footer-brand p {
-    max-width: 100%;
-  }
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 768px) {
-  .footer-wrapper {
-    padding: 55px 22px 35px;
-  }
-
-  .footer-logo {
-    width: 95px;
-
-    margin: auto auto 22px;
-  }
-
-  .footer-brand {
     text-align: center;
+
+    gap: 40px;
   }
 
-  .footer-brand h2 {
-    font-size: 38px;
-  }
-
-  .footer-tagline {
+  .footer-logo-area {
     justify-content: center;
-
-    font-size: 18px;
-
-    margin-bottom: 22px;
   }
 
   .footer-brand p {
-    font-size: 16px;
+    margin: auto auto 28px;
 
-    line-height: 1.8;
+    max-width: 650px;
+  }
+
+  .footer-feature {
+    justify-content: center;
+  }
+
+  .footer-column {
+    max-width: 420px;
 
     margin: auto;
   }
 
-  .footer-right {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 25px;
-
-    margin-top: 10px;
-  }
-
-  .footer-box {
-    min-width: unset;
-  }
-
-  .footer-box h3 {
-    font-size: 28px;
-
-    text-align: center;
-
-    margin-bottom: 18px;
-  }
-
-  .footer-box a {
-    flex-direction: column;
-
+  .footer-column a {
     justify-content: center;
-
-    text-align: center;
-
-    gap: 10px;
-
-    margin-bottom: 18px;
-  }
-
-  .footer-box a:hover {
-    transform: none;
-  }
-
-  .footer-box img {
-    width: 48px;
-
-    height: 48px;
-  }
-
-  .footer-box span {
-    font-size: 15px;
-
-    line-height: 1.5;
-  }
-
-  .footer-feature {
-    padding: 10px 20px 45px;
-
-    justify-content: space-evenly;
-
-    gap: 20px;
-  }
-
-  .feature-card {
-    flex: 1;
-  }
-
-  .feature-card img {
-    width: 42px;
-
-    height: 42px;
-  }
-
-  .feature-card span {
-    font-size: 15px;
-  }
-
-  .footer-bottom {
-    padding: 22px;
-
-    font-size: 15px;
   }
 }
 
-/* =========================================
-   HP KECIL
-========================================= */
+/* =====================================================
+   MOBILE
+===================================================== */
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
+  .footer-top {
+    padding: 55px 22px 40px;
+
+    gap: 35px;
+  }
+
+  .footer-logo {
+    width: 95px;
+  }
+
   .footer-brand h2 {
-    font-size: 32px;
+    font-size: 34px;
   }
 
   .footer-tagline {
+    justify-content: center;
+
     font-size: 16px;
   }
 
   .footer-brand p {
     font-size: 15px;
+
+    line-height: 1.75;
   }
 
-  .footer-box h3 {
-    font-size: 24px;
+  .footer-feature {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+
+    margin-top: 5px;
   }
 
-  .footer-box img {
-    width: 42px;
+  .feature-item {
+    flex-direction: column;
 
-    height: 42px;
+    text-align: center;
+
+    gap: 8px;
   }
 
-  .footer-box span {
+  .feature-item img {
+    width: 32px;
+
+    height: 32px;
+  }
+
+  .feature-item span {
+    font-size: 13px;
+  }
+
+  .footer-column h3 {
+    font-size: 22px;
+
+    margin-bottom: 16px;
+  }
+
+  .footer-column a {
+    gap: 10px;
+
+    margin-bottom: 14px;
+  }
+
+  .footer-column img {
+    width: 24px;
+
+    height: 24px;
+  }
+
+  .footer-column span {
+    font-size: 14px;
+  }
+}
+
+/* =====================================================
+   HP KECIL
+===================================================== */
+
+@media (max-width: 430px) {
+  .footer-logo {
+    width: 82px;
+  }
+
+  .footer-brand h2 {
+    font-size: 30px;
+  }
+
+  .footer-tagline {
+    font-size: 15px;
+  }
+
+  .footer-brand p {
     font-size: 14px;
   }
 
-  .feature-card img {
-    width: 36px;
-
-    height: 36px;
+  .footer-feature {
+    gap: 10px;
   }
 
-  .feature-card span {
+  .feature-item img {
+    width: 28px;
+
+    height: 28px;
+  }
+
+  .feature-item span {
+    font-size: 12px;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-column h3 {
+    font-size: 20px;
+  }
+
+  .footer-column img {
+    width: 22px;
+
+    height: 22px;
+  }
+
+  .footer-column span {
     font-size: 13px;
   }
 
   .footer-bottom {
-    font-size: 14px;
+    font-size: 13px;
+
+    padding: 18px;
   }
 }

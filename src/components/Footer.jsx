@@ -2,103 +2,66 @@ import "../Footer.css";
 
 import logo from "../assets/Logo RB.png";
 
-// Contact
-import waIcon from "../assets/icons/WA.png";
-import emailIcon from "../assets/icons/Email.png";
-
-// Social
-import igIcon from "../assets/icons/IG.png";
-import tiktokIcon from "../assets/icons/TikTok.png";
-
-// Feature
-import meatIcon from "../assets/icons/FullDaging.png";
-import freshIcon from "../assets/icons/Halal.png";
+// Feature Icons
+import chickenIcon from "../assets/icons/FullDaging.png";
+import halalIcon from "../assets/icons/Halal.png";
 import deliveryIcon from "../assets/icons/SiapAntar.png";
 
 export default function Footer() {
   return (
     <footer className="footer">
-      {/* ===================== TOP ===================== */}
+      <div className="footer-container">
+        {/* ================= LEFT ================= */}
 
-      <div className="footer-top">
-        {/* LOGO */}
-
-        <div className="footer-logo-area">
+        <div className="footer-left">
           <img src={logo} alt="Dimsum Kita" className="footer-logo" />
-        </div>
 
-        {/* BRAND */}
-
-        <div className="footer-brand">
           <h2>DIMSUM KITA</h2>
 
-          <div className="footer-tagline">
-            <span>Premium</span>
-            <span>•</span>
-            <span>Fresh</span>
-          </div>
+          <p className="footer-tagline">Premium • Fresh • Full Daging</p>
 
-          <p>
-            Dimsum premium dengan isian <strong>full daging</strong>, dibuat
-            fresh setiap hari menggunakan bahan berkualitas, halal, dan
-            disajikan hangat untuk keluarga Indonesia.
+          <p className="footer-description">
+            Dimsum premium dengan isian full daging yang dibuat fresh setiap
+            hari menggunakan bahan pilihan berkualitas. Cocok dinikmati bersama
+            keluarga, teman maupun sebagai hidangan favorit di setiap momen.
           </p>
-
-          {/* FEATURE */}
-
-          <div className="footer-feature">
-            <div className="feature-item">
-              <img src={meatIcon} alt="Full Daging" />
-              <span>Full Daging</span>
-            </div>
-
-            <div className="feature-item">
-              <img src={freshIcon} alt="Fresh" />
-              <span>Fresh</span>
-            </div>
-
-            <div className="feature-item">
-              <img src={deliveryIcon} alt="Siap Diantar" />
-              <span>Siap Diantar</span>
-            </div>
-          </div>
         </div>
 
-        {/* CONTACT */}
+        {/* ================= MIDDLE ================= */}
 
-        <div className="footer-column">
-          <h3>Kontak</h3>
+        <div className="footer-middle">
+          <div className="footer-title">Info Kontak</div>
 
           <a
             href="https://wa.me/6289507310566"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={waIcon} alt="WhatsApp" />
-
-            <span>0895-0731-0566</span>
+            WhatsApp
           </a>
 
-          <a href="mailto:dimsumkitaaofficial@gmail.com">
-            <img src={emailIcon} alt="Email" />
+          <a href="mailto:dimsumkitaaofficial@gmail.com">Email</a>
 
-            <span>dimsumkitaaofficial@gmail.com</span>
+          <a
+            href="https://maps.app.goo.gl/ACTwgZ4fwKqN26AaA"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Lokasi
           </a>
         </div>
 
-        {/* SOCIAL */}
+        {/* ================= RIGHT ================= */}
 
-        <div className="footer-column">
-          <h3>Sosial Media</h3>
+        <div className="footer-right">
+          <div className="footer-title">Sosial Media</div>
 
           <a
             href="https://instagram.com/dimsumkitaofficial"
             target="_blank"
             rel="noreferrer"
           >
-            <img src={igIcon} alt="Instagram" />
-
-            <span>@dimsumkitaofficial</span>
+            Instagram
           </a>
 
           <a
@@ -106,14 +69,42 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={tiktokIcon} alt="TikTok" />
+            TikTok
+          </a>
 
-            <span>@dimsumkitaofficial</span>
+          <a
+            href="https://spf.shopee.co.id/AKYNlCaczZ"
+            target="_blank"
+            rel="noreferrer"
+          >
+            ShopeeFood
           </a>
         </div>
       </div>
 
-      {/* ===================== COPYRIGHT ===================== */}
+      {/* ================= FEATURE ================= */}
+
+      <div className="footer-feature">
+        <div className="feature-card">
+          <img src={chickenIcon} alt="Full Daging" />
+
+          <span>Full Daging</span>
+        </div>
+
+        <div className="feature-card">
+          <img src={halalIcon} alt="100% Halal" />
+
+          <span>100% Halal</span>
+        </div>
+
+        <div className="feature-card">
+          <img src={deliveryIcon} alt="Siap Diantar" />
+
+          <span>Siap Diantar</span>
+        </div>
+      </div>
+
+      {/* ================= COPYRIGHT ================= */}
 
       <div className="footer-bottom">
         © 2025 <strong>Dimsum Kita.</strong> All Rights Reserved.

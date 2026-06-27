@@ -9,7 +9,7 @@ import deliveryIcon from "../assets/icons/SiapAntar.png";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="TEST123">
       <div className="footer-container">
         {/* ================= LEFT ================= */}
 

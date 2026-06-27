@@ -10,6 +10,16 @@ import deliveryIcon from "../assets/icons/SiapAntar.png";
 export default function Footer() {
   return (
     <footer className="footer">
+      <h1
+        style={{
+          background: "lime",
+          color: "black",
+          fontSize: "70px",
+          textAlign: "center",
+        }}
+      >
+        TEST FOOTER BARU
+      </h1>
       <div className="footer-container">
         {/* ================= LEFT ================= */}
 

@@ -1,104 +1,193 @@
 .footer {
-  background: #151515;
+  background: #171717;
   color: #fff;
-}
-
-.footer-top-line {
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(90deg, #ff6b00, #ffb347);
 }
 
 .footer-container {
   max-width: 1200px;
+
   margin: auto;
 
   padding: 70px 30px;
 
   display: grid;
-  grid-template-columns: 1.7fr 1fr 1fr;
-  gap: 55px;
+
+  grid-template-columns: 1.6fr 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: flex-start;
 }
+
+/* BRAND */
 
 .footer-brand {
   display: flex;
-  align-items: flex-start;
-  gap: 22px;
+
+  gap: 25px;
 }
 
 .footer-brand img {
-  width: 115px;
-  height: 115px;
+  width: 120px;
+
+  height: 120px;
+
   object-fit: contain;
+
   flex-shrink: 0;
 }
 
 .footer-brand-text h2 {
   color: #ff6b00;
+
   font-size: 34px;
-  margin-bottom: 8px;
+
+  margin-bottom: 5px;
 }
 
 .footer-tagline {
-  display: inline-block;
-  color: #ffb347;
-  font-size: 14px;
+  display: block;
+
+  color: #ffc785;
+
   font-weight: 600;
+
   margin-bottom: 18px;
 }
 
 .footer-brand-text p {
-  color: #cfcfcf;
-  line-height: 1.8;
-  max-width: 420px;
+  color: #d0d0d0;
+
+  line-height: 1.9;
+
+  margin-bottom: 30px;
 }
+
+.footer-feature {
+  display: flex;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+}
+
+.footer-feature div {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #ddd;
+
+  font-size: 14px;
+}
+
+.footer-feature svg {
+  color: #ff6b00;
+
+  font-size: 30px;
+}
+
+/* LINKS */
 
 .footer-links h3 {
   color: #ff6b00;
-  margin-bottom: 20px;
-  font-size: 22px;
+
+  font-size: 24px;
+
+  margin-bottom: 25px;
 }
 
 .footer-links a {
   display: flex;
+
   align-items: center;
-  gap: 10px;
+
+  gap: 14px;
+
+  color: #ddd;
 
   text-decoration: none;
 
-  color: #d8d8d8;
-
-  margin-bottom: 14px;
+  margin-bottom: 22px;
 
   transition: 0.3s;
 }
 
 .footer-links a:hover {
   color: #ff6b00;
+
   transform: translateX(6px);
 }
+
+.icon {
+  font-size: 34px;
+
+  flex-shrink: 0;
+}
+
+.wa {
+  color: #25d366;
+}
+
+.email {
+  color: #ea4335;
+}
+
+.ig {
+  color: #e1306c;
+}
+
+.tiktok {
+  color: #fff;
+}
+
+/* COPYRIGHT */
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 
   text-align: center;
 
-  color: #bdbdbd;
+  padding: 25px;
 
-  padding: 22px;
+  color: #bdbdbd;
 }
 
 .footer-bottom strong {
   color: #ff6b00;
 }
 
-/* TABLET */
+/* =======================
+TABLET
+======================= */
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .footer-container {
     grid-template-columns: 1fr;
 
-    gap: 45px;
+    gap: 40px;
+  }
+}
+
+/* =======================
+MOBILE
+======================= */
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 45px 18px;
+
+    /* TETAP LANDSCAPE */
+
+    grid-template-columns: 1.3fr 0.9fr 0.9fr;
+
+    gap: 18px;
+
+    align-items: start;
   }
 
   .footer-brand {
@@ -109,35 +198,14 @@
     text-align: center;
   }
 
-  .footer-brand-text p {
-    max-width: 100%;
-  }
-
-  .footer-links {
-    text-align: center;
-  }
-
-  .footer-links a {
-    justify-content: center;
-  }
-}
-
-/* MOBILE */
-
-@media (max-width: 480px) {
-  .footer-container {
-    padding: 55px 22px;
-
-    gap: 35px;
-  }
-
   .footer-brand img {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+
+    height: 80px;
   }
 
   .footer-brand-text h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .footer-tagline {
@@ -145,20 +213,80 @@
   }
 
   .footer-brand-text p {
-    font-size: 15px;
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
   }
 
-  .footer-links h3 {
+  .footer-feature {
+    justify-content: center;
+
+    gap: 14px;
+  }
+
+  .footer-feature div {
+    font-size: 11px;
+  }
+
+  .footer-feature svg {
     font-size: 20px;
   }
 
+  .footer-links h3 {
+    font-size: 18px;
+
+    margin-bottom: 15px;
+  }
+
   .footer-links a {
-    font-size: 15px;
+    font-size: 12px;
+
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+    word-break: break-word;
+  }
+
+  .icon {
+    font-size: 20px;
   }
 
   .footer-bottom {
-    font-size: 13px;
+    font-size: 12px;
 
     padding: 18px;
+  }
+}
+
+/* HP KECIL */
+
+@media (max-width: 430px) {
+  .footer-container {
+    grid-template-columns: 1.2fr 0.9fr 0.9fr;
+
+    gap: 12px;
+  }
+
+  .footer-brand-text h2 {
+    font-size: 21px;
+  }
+
+  .footer-links h3 {
+    font-size: 16px;
+  }
+
+  .footer-links a {
+    font-size: 11px;
+  }
+
+  .footer-feature {
+    gap: 8px;
+  }
+
+  .footer-feature div {
+    font-size: 10px;
   }
 }

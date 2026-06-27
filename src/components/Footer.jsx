@@ -1,13 +1,24 @@
 import "../Footer.css";
 import logo from "../assets/Logo RB.png";
 
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaTiktok,
+  FaShippingFast,
+} from "react-icons/fa";
+
+import {
+  MdEmail,
+  MdRestaurant,
+  MdOutlineLocalFireDepartment,
+} from "react-icons/md";
+
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-top-line"></div>
-
       <div className="footer-container">
-        {/* Brand */}
+        {/* BRAND */}
 
         <div className="footer-brand">
           <img src={logo} alt="Dimsum Kita" />
@@ -24,10 +35,27 @@ export default function Footer() {
               menggunakan bahan berkualitas dan disajikan hangat untuk keluarga
               Indonesia.
             </p>
+
+            <div className="footer-feature">
+              <div>
+                <MdRestaurant />
+                <span>Full Daging</span>
+              </div>
+
+              <div>
+                <MdOutlineLocalFireDepartment />
+                <span>Fresh</span>
+              </div>
+
+              <div>
+                <FaShippingFast />
+                <span>Siap Diantar</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Kontak */}
+        {/* KONTAK */}
 
         <div className="footer-links">
           <h3>Kontak</h3>
@@ -37,13 +65,17 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            💬 WhatsApp
+            <FaWhatsapp className="icon wa" />
+            <span>0895-0731-0566</span>
           </a>
 
-          <a href="mailto:dimsumkitaaofficial@gmail.com">📧 Email</a>
+          <a href="mailto:dimsumkitaaofficial@gmail.com">
+            <MdEmail className="icon email" />
+            <span>dimsumkitaaofficial@gmail.com</span>
+          </a>
         </div>
 
-        {/* Sosial */}
+        {/* SOSMED */}
 
         <div className="footer-links">
           <h3>Sosial Media</h3>
@@ -53,7 +85,8 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            📷 Instagram
+            <FaInstagram className="icon ig" />
+            <span>@dimsumkitaofficial</span>
           </a>
 
           <a
@@ -61,13 +94,14 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            🎵 TikTok
+            <FaTiktok className="icon tiktok" />
+            <span>@dimsumkitaofficial</span>
           </a>
         </div>
       </div>
 
       <div className="footer-bottom">
-        © 2025 <strong>Dimsum Kita</strong>. All Rights Reserved.
+        © 2025 <strong>Dimsum Kita.</strong> All Rights Reserved.
       </div>
     </footer>
   );

@@ -18,12 +18,13 @@ export default function Footer() {
 
           <h2>DIMSUM KITA</h2>
 
-          <p className="footer-tagline">Premium • Fresh • Full Daging</p>
+          <p className="footer-tagline">Premium & Fresh</p>
 
           <p className="footer-description">
-            Dimsum premium dengan isian full daging yang dibuat fresh setiap
-            hari menggunakan bahan pilihan berkualitas. Cocok dinikmati bersama
-            keluarga, teman maupun sebagai hidangan favorit di setiap momen.
+            Dimsum premium dengan isian full daging ayam yang dibuat fresh
+            setiap hari menggunakan bahan pilihan berkualitas. Cocok dinikmati
+            bersama keluarga, teman maupun sebagai hidangan favorit di setiap
+            momen.
           </p>
         </div>
 
@@ -41,14 +42,6 @@ export default function Footer() {
           </a>
 
           <a href="mailto:dimsumkitaaofficial@gmail.com">Email</a>
-
-          <a
-            href="https://maps.app.goo.gl/ACTwgZ4fwKqN26AaA"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Lokasi
-          </a>
         </div>
 
         {/* ================= RIGHT ================= */}
@@ -71,14 +64,6 @@ export default function Footer() {
           >
             TikTok
           </a>
-
-          <a
-            href="https://spf.shopee.co.id/AKYNlCaczZ"
-            target="_blank"
-            rel="noreferrer"
-          >
-            ShopeeFood
-          </a>
         </div>
       </div>
 
@@ -88,7 +73,7 @@ export default function Footer() {
         <div className="feature-card">
           <img src={chickenIcon} alt="Full Daging" />
 
-          <span>Full Daging</span>
+          <span>Full Daging Ayam</span>
         </div>
 
         <div className="feature-card">

@@ -3,9 +3,9 @@ import "../Footer.css";
 import logo from "../assets/Logo RB.png";
 
 // Feature Icons
-import chickenIcon from "../assets/icons/FullDaging.png";
-import halalIcon from "../assets/icons/Halal.png";
-import deliveryIcon from "../assets/icons/SiapAntar.png";
+import chickenIcon from "../assets/FullDaging.png";
+import halalIcon from "../assets/Halal.png";
+import deliveryIcon from "../assets/SiapAntar.png";
 
 export default function Footer() {
   return (

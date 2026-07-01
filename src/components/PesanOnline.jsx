@@ -33,12 +33,12 @@ export default function PesanOnline() {
           </a>
 
           <a
-            href="LINK_GOFOOD"
+            href="https://food.grab.com/id/en/restaurant/dimsum-kita-official-jatiuwung-delivery/6-C8BBCJVVHETGGA"
             target="_blank"
             rel="noreferrer"
-            className="gofood-btn"
+            className="grabfood-btn"
           >
-            GoFood
+            GrabFood
           </a>
         </div>
       </div>

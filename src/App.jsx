@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AOS from "aos";
+import ReactGA from "react-ga4";
 import "aos/dist/aos.css";
 import Loading from "./components/Loading";
 import Navbar from "./components/Navbar";
@@ -25,6 +26,11 @@ export default function App() {
       duration: 1000,
       once: true,
       offset: 100,
+    });
+
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname,
     });
 
     const timer = setTimeout(() => {

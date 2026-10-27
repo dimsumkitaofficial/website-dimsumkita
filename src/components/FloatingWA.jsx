@@ -7,6 +7,7 @@ export default function FloatingWA() {
       className="floating-wa"
       target="_blank"
       rel="noreferrer"
+      aria-label="Hubungi kami melalui WhatsApp"
     >
       <img
         src="https://cdn-icons-png.flaticon.com/512/733/733585.png"

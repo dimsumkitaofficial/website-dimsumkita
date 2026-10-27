@@ -24,7 +24,12 @@ export default function BackToTop() {
   };
 
   return (
-    <button className={`back-to-top ${show ? "show" : ""}`} onClick={scrollTop}>
+    <button
+      className={`back-to-top ${show ? "show" : ""}`}
+      onClick={scrollTop}
+      aria-label="Kembali ke atas"
+      type="button"
+    >
       ↑
     </button>
   );

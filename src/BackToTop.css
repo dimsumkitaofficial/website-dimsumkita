@@ -1,44 +1,72 @@
 .back-to-top {
   position: fixed;
+  right: 20px;
+  /* Jarak di atas ikon WhatsApp: bottom 20px + tinggi WA 52px + gap 12px = 84px */
+  bottom: 84px;
+  bottom: calc(84px + env(safe-area-inset-bottom, 0px));
 
-  right: 35px;
-  bottom: 110px;
-
-  width: 55px;
-  height: 55px;
+  width: 52px;
+  height: 52px;
 
   border: none;
-
   border-radius: 50%;
 
   background: #ff6b00;
-  color: white;
+  color: #ffffff;
 
-  font-size: 24px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
 
   cursor: pointer;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   opacity: 0;
   visibility: hidden;
+  transform: translateY(8px);
 
-  transition: 0.3s;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 
-  z-index: 999;
+  z-index: 990;
+  box-shadow: 0 4px 14px rgba(255, 107, 0, 0.38);
+
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
+  transform: translateY(0);
 }
 
 .back-to-top:hover {
-  transform: translateY(-5px);
+  background: #e65c00;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255, 107, 0, 0.48);
 }
 
+.back-to-top:active {
+  transform: translateY(0) scale(0.95);
+}
+
+/* Responsif Mobile & HP (<= 768px) */
 @media (max-width: 768px) {
-  .whatsapp-float,
   .back-to-top {
-    width: 60px;
-    height: 60px;
+    right: 16px;
+    /* Jarak di atas ikon WhatsApp: bottom 16px + tinggi WA 44px + gap 10px = 70px */
+    bottom: 70px;
+    bottom: calc(70px + env(safe-area-inset-bottom, 0px));
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
   }
 }

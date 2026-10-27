@@ -1,42 +1,64 @@
 .floating-wa {
   position: fixed;
+  right: 20px;
+  bottom: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
 
-  right: 25px;
-  bottom: 30px;
-
-  width: 70px;
-  height: 70px;
+  width: 52px;
+  height: 52px;
 
   border-radius: 50%;
+  z-index: 990;
 
-  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  animation: pulse 2s infinite;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+  animation: waPulse 2.5s infinite;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.floating-wa:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.floating-wa:active {
+  transform: scale(0.95);
 }
 
 .floating-wa img {
   width: 100%;
   height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-@keyframes pulse {
+@keyframes waPulse {
   0% {
     transform: scale(1);
   }
-
   50% {
-    transform: scale(1.08);
+    transform: scale(1.06);
   }
-
   100% {
     transform: scale(1);
   }
 }
 
+/* Responsif Mobile & HP (<= 768px) */
 @media (max-width: 768px) {
-  .whatsapp-float,
-  .back-to-top {
-    width: 60px;
-    height: 60px;
+  .floating-wa {
+    right: 16px;
+    bottom: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    width: 44px;
+    height: 44px;
   }
 }

@@ -27,41 +27,45 @@ export default function Menu() {
       foto: Original,
       deskripsi:
         "Dimsum ayam premium dengan rasa gurih, lembut, dan dibuat fresh setiap hari.",
-      bonus: false,
-      harga4: "Rp12.000",
-      harga6: "Rp18.000",
-      harga12: "Rp36.000",
-      harga16: "Rp50.000",
+      bonus12: false,
+      bonus16: false,
+      harga4: "Rp14.000",
+      harga6: "Rp22.000",
+      harga12: "Rp43.000",
+      harga16: "Rp60.000",
     },
     {
       nama: "Dimsum Mentai",
       foto: Mentai,
       deskripsi: "Dimsum dengan topping mentai premium yang creamy dan lezat.",
-      bonus: true,
+      bonus12: false,
+      bonus16: true,
       harga4: "Rp18.000",
-      harga6: "Rp26.000",
+      harga6: "Rp27.000",
       harga12: "Rp54.000",
-      harga16: "Rp70.000",
+      harga16: "Rp72.000",
     },
     {
       nama: "Dimsum Mozzarella",
       foto: Mozzarella,
       deskripsi: "Dimsum mozzarella dengan keju lumer yang melimpah.",
-      bonus: true,
+      bonus12: true,
+      bonus16: true,
       harga4: "Rp18.000",
-      harga6: "Rp26.000",
+      harga6: "Rp27.000",
       harga12: "Rp54.000",
-      harga16: "Rp70.000",
+      harga16: "Rp72.000",
     },
     {
       nama: "Dimsum Mushroom",
       foto: Mushroom,
       deskripsi: "Dimsum mushroom dengan cita rasa jamur yang unik dan gurih.",
-      bonus: true,
-      harga4: "Rp16.000",
-      harga6: "Rp22.000",
-      harga12: "Rp40.000",
-      harga16: "Rp55.000",
+      bonus12: false,
+      bonus16: true,
+      harga4: "Rp20.000",
+      harga6: "Rp28.000",
+      harga12: "Rp55.000",
+      harga16: "Rp72.000",
     },
   ];
 
@@ -98,7 +102,7 @@ export default function Menu() {
               className="close-popup"
               onClick={() => setSelectedProduct(null)}
             >
-              ×
+              &times;
             </span>
 
             <div className="popup-layout">
@@ -134,7 +138,7 @@ export default function Menu() {
                     <div className="price-right">
                       <span>{selectedProduct.harga12}</span>
 
-                      {selectedProduct.bonus && (
+                      {selectedProduct.bonus12 && (
                         <span className="bonus">Free Chili Oil</span>
                       )}
                     </div>
@@ -146,7 +150,7 @@ export default function Menu() {
                     <div className="price-right">
                       <span>{selectedProduct.harga16}</span>
 
-                      {selectedProduct.bonus && (
+                      {selectedProduct.bonus16 && (
                         <span className="bonus">Free Chili Oil</span>
                       )}
                     </div>
@@ -156,9 +160,7 @@ export default function Menu() {
                 <a
                   className="popup-wa"
                   href={`https://wa.me/6289507310566?text=${encodeURIComponent(
-                    `Halo Admin Dimsum Kita,
-
-Saya ingin memesan ${selectedProduct.nama}.`,
+                    `Halo Admin Dimsum Kita,\n\nSaya ingin memesan ${selectedProduct.nama}.`,
                   )}`}
                   target="_blank"
                   rel="noreferrer"
